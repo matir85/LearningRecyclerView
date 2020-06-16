@@ -1,10 +1,10 @@
 package pl.nynacode.naukapraw
 
-import java.util.ArrayList
+import java.util.*
 
 object KodeksKarny {
 
-    val nrArticle:ArrayList<String> = arrayListOf<String>(
+    val nrArticle: ArrayList<String> = arrayListOf(
         "Rozdział I. Zasady odpowiedzialności karnej",
         "Art. 1. Warunki odpowiedzialności karnej",
         "Art. 2. Odpowiedzialność za przestępstwo skutkowe popełnione przez zaniechanie",
@@ -21,7 +21,7 @@ object KodeksKarny {
 
     )
 
-    val txtArticle:ArrayList<String> = arrayListOf<String>(
+    val txtArticle: ArrayList<String> = arrayListOf(
         "",
         "§ 1. Odpowiedzialności karnej podlega ten tylko, kto popełnia czyn zabroniony pod groźbą kary przez ustawę obowiązującą w czasie jego popełnienia.\n \n" +
                 "§ 2. Nie stanowi przestępstwa czyn zabroniony, którego społeczna szkodliwość jest znikoma.\n \n" +
@@ -32,7 +32,7 @@ object KodeksKarny {
                 "§ 2. Jeżeli według nowej ustawy za czyn objęty wyrokiem nie można orzec kary w wysokości kary orzeczonej, wymierzoną karę obniża się do wysokości najsurowszej kary możliwej do orzeczenia na podstawie nowej ustawy.\n \n" +
                 "§ 3. Jeżeli według nowej ustawy czyn objęty wyrokiem nie jest już zagrożony karą pozbawienia wolności, wymierzoną karę pozbawienia wolności podlegającą wykonaniu zamienia się na grzywnę albo karę ograniczenia wolności, przyjmując że jeden miesiąc pozbawienia wolności równa się 60 stawkom dziennym grzywny albo 2 miesiącom ograniczenia wolności.\n \n" +
                 "§ 4. Jeżeli według nowej ustawy czyn objęty wyrokiem nie jest już zabroniony pod groźbą kary, skazanie ulega zatarciu z mocy prawa. ",
-    "Ustawę karną polską stosuje się do sprawcy, który popełnił czyn zabroniony na terytorium Rzeczypospolitej Polskiej, jak również na polskim statku wodnym lub powietrznym, chyba że umowa międzynarodowa, której Rzeczpospolita Polska jest stroną, stanowi inaczej. ",
+        "Ustawę karną polską stosuje się do sprawcy, który popełnił czyn zabroniony na terytorium Rzeczypospolitej Polskiej, jak również na polskim statku wodnym lub powietrznym, chyba że umowa międzynarodowa, której Rzeczpospolita Polska jest stroną, stanowi inaczej. ",
         "§ 1. Czyn zabroniony uważa się za popełniony w czasie, w którym sprawca działał lub zaniechał działania, do którego był obowiązany.\n" +
                 "§ 2. Czyn zabroniony uważa się za popełniony w miejscu, w którym sprawca działał lub zaniechał działania, do którego był obowiązany, albo gdzie skutek stanowiący znamię czynu zabronionego nastąpił lub według zamiaru sprawcy miał nastąpić.",
         "§ 1. Przestępstwo jest zbrodnią albo występkiem.\n" +
