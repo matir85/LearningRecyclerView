@@ -49,32 +49,34 @@ class MyAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         }
 
     override fun getItemCount(): Int {
-        return KodeksKarny.nrArticle.size
+        return KodeksKarny.kodeksKarnyList.size
     }
 
     override fun getItemViewType(position: Int): Int =
-        when (position) {
-            0 -> Types.Title.rawType
-            else -> Types.Article.rawType
+        when (KodeksKarny.kodeksKarnyList[position]) {
+            is Title -> Types.Title.rawType
+            is Article -> Types.Article.rawType
         }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) =
-        when (Types.from(getItemViewType(position))) {
-            Types.Title -> {
-                val chapterName = holder.itemView.tvChapterName
-                chapterName.text = KodeksKarny.nrArticle[position]
-            }
-            Types.Article -> {
-                val nrArt = holder.itemView.nrArt
-                nrArt.text = KodeksKarny.nrArticle[position]
-                val txtArt = holder.itemView.txtArt
-                txtArt.text = KodeksKarny.txtArticle[position]
+        KodeksKarny.kodeksKarnyList[position].let { kodeskKarnyItem ->
+            when (kodeskKarnyItem) {
+                is Title -> {
+                    val chapterName = holder.itemView.tvChapterName
+                    chapterName.text = kodeskKarnyItem.title
+                }
+                is Article -> {
+                    val nrArt = holder.itemView.nrArt
+                    nrArt.text = kodeskKarnyItem.title
+                    val txtArt = holder.itemView.txtArt
+                    txtArt.text = kodeskKarnyItem.content
 
-                nrArt.setOnClickListener {
-                    if (txtArt.visibility == View.GONE) {
-                        txtArt.visibility = View.VISIBLE
-                    } else {
-                        txtArt.visibility = View.GONE
+                    nrArt.setOnClickListener {
+                        if (txtArt.visibility == View.GONE) {
+                            txtArt.visibility = View.VISIBLE
+                        } else {
+                            txtArt.visibility = View.GONE
+                        }
                     }
                 }
             }
